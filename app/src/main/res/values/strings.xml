@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">LibraryTestApplication</string>
+
+
+
+
+    <string name="amount">Amount</string>
+    <string name="orderRefNum">OrderReferenceNumber</string>
+    <string name="autoRedirect">AutoRedirect</string>
+    <string name="expiryDate">Expiry Date</string>
+    <string name="email">Email Address</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="bankIdentifierNum">Bank Identification Number</string>
+    <string name="encryptRequest">Encrypt Request</string>
+    <string name="proceedCheckout">Proceed Checkout</string>
+
+
+
+    <string name="storeID">28</string> // Sample StoreID
+    <string name="easyPaySecretKey">1I1I9G9540UGXHIK</string> // Sample EasyPaySecretKey
+    <string name="postBackURL">http://192.168.128.17:9081/clusterqa/status.php</string> // Sample postBackURL
+
+
+    <string name="payment_prompt">Choose payment method</string>
+    <string-array name="payment_method">
+        <item>ALL</item>
+        <item>OTC_PAYMENT_METHOD</item>
+        <item>MA_PAYMENT_METHOD</item>
+        <item>CC_PAYMENT_METHOD</item>
+        <item>QR_PAYMENT_METHOD</item>
+    </string-array>
+</resources>

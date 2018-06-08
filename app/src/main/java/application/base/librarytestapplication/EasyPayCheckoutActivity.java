@@ -7,6 +7,9 @@ import android.widget.Toast;
 import com.easypay.widget.Checkout;
 import com.easypay.widget.EasyPayCallback;
 import com.easypay.widget.EasyPayCheckout;
+import com.easypay.widget.EasyPayCheckoutView;
+import com.easypay.widget.EasyPayEnvironment;
+import com.easypay.widget.EasyPayInitializeMerchant;
 import com.easypay.widget.InitializeMerchant;
 
 /**
@@ -15,8 +18,8 @@ import com.easypay.widget.InitializeMerchant;
 
 public class EasyPayCheckoutActivity  extends AppCompatActivity implements EasyPayCallback {
     EasyPayCheckout easyPayCheckoutObj;
-    Checkout component;
-    InitializeMerchant initializeMerchant;
+    EasyPayCheckoutView component;
+    EasyPayInitializeMerchant initializeMerchant;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +29,9 @@ public class EasyPayCheckoutActivity  extends AppCompatActivity implements EasyP
     }
     //Initialization of easypay SDK components
     private void initialization() {
-        component = (Checkout) findViewById(R.id.componentID);
+        component = (EasyPayCheckoutView) findViewById(R.id.componentID);
 
-        initializeMerchant = InitializeMerchant.getInstance(
+        initializeMerchant = EasyPayInitializeMerchant.getInstance(
                 getString(R.string.storeID), getString(R.string.easyPaySecretKey),
                 getString(R.string.postBackURL), this);
 
@@ -43,13 +46,19 @@ public class EasyPayCheckoutActivity  extends AppCompatActivity implements EasyP
 
     // Method call on proceedCheckout
     private void proceedCheckout(){
-        initializeMerchant.proceedCheckout(component,easyPayCheckoutObj);
+        initializeMerchant.proceedToCheckout(component,easyPayCheckoutObj, EasyPayEnvironment.PRODUCTION);
     }
 
-    //  Callback recieved on proceedCheckout method
-    @Override
-    public void checkoutCallback(boolean status,String message) {
 
+    @Override
+    public void checkoutSuccessCallback(String message) {
         Toast.makeText(this,"Response : "+message,Toast.LENGTH_LONG).show();
+
+    }
+
+    @Override
+    public void checkoutFailureCallback(String message) {
+        Toast.makeText(this,"Response : "+message,Toast.LENGTH_LONG).show();
+
     }
 }

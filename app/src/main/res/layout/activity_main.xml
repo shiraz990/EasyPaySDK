@@ -47,23 +47,8 @@
                 android:hint="@string/orderRefNum"
                 android:inputType="text" />
 
-            <Switch
-                android:id="@+id/switchAutoRedirect"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_weight="1"
-                android:hint="@string/autoRedirect" />
 
-            <EditText
-                android:id="@+id/editTextExpiryDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="@string/expiryDate"
-                android:inputType="text" />
+
 
 
             <Spinner
@@ -106,13 +91,6 @@
                 android:hint="@string/bankIdentifierNum"
                 android:inputType="text" />
 
-            <Switch
-                android:id="@+id/switchEncrypted"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_weight="1"
-                android:hint="@string/encryptRequest" />
         </LinearLayout>
 
 

@@ -35,6 +35,7 @@ public class EasyPayCheckoutActivity  extends AppCompatActivity implements EPCal
                 getString(R.string.storeID), getString(R.string.easyPaySecretKey),
                 getString(R.string.postBackURL), this);
 
+
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null){
             easyPayCheckoutObj = (EPCheckout) bundle.getSerializable("EasyPayCheckout");

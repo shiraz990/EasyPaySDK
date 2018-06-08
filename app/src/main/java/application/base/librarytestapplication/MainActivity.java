@@ -7,13 +7,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Switch;
 
 import com.easypay.widget.EPCheckout;
-import com.easypay.widget.EPPaymentMethod; 
+import com.easypay.widget.EPPaymentMethod;
 
 public class MainActivity extends AppCompatActivity  {
 

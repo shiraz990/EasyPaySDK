@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="EasyPayCheckoutActivity">
 
-    <com.easypay.widget.EasyPayCheckoutView
+    <com.easypay.widget.EPCheckoutView
         android:id="@+id/componentID"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

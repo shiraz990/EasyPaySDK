@@ -12,8 +12,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 
-import com.easypay.widget.EaayPayPaymentMethod;
-import com.easypay.widget.EasyPayCheckout;
+import com.easypay.widget.EPCheckout;
+import com.easypay.widget.EPPaymentMethod; 
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity  {
 
     EditText amount ,orderRefNo  ,emailAdd , mobileNum , bankIdentificationNumber ;
     Spinner spinnerPaymentMethod;
-    EasyPayCheckout easyPayCheckout;
+    EPCheckout easyPayCheckout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,9 +88,9 @@ public class MainActivity extends AppCompatActivity  {
 
         proceedButton = (Button) findViewById(R.id.proceedButton);
         spinnerPaymentMethod = (Spinner) findViewById(R.id.spinnerPaymentMethod);
-        spinnerPaymentMethod.setAdapter(new ArrayAdapter<EaayPayPaymentMethod>(this, android.R.layout.simple_spinner_item, EaayPayPaymentMethod.values()));
+        spinnerPaymentMethod.setAdapter(new ArrayAdapter<EPPaymentMethod>(this, android.R.layout.simple_spinner_item, EPPaymentMethod.values()));
 
-        easyPayCheckout = new EasyPayCheckout();
+        easyPayCheckout = new EPCheckout();
     }
 
 
